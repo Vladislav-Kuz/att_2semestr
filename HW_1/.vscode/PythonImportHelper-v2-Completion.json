@@ -1,0 +1,11 @@
+[
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "n = 123\n# m = str(n)\n# res = int(m[0]) + int(m[1]) + int(m[2])\n# print(res)\n# f1 = n//100\n# f2 = n%100//10\n# f3 = n%10\n# res = f1 + f2 + f3 \n# print(f\"{res} -> {f1} {f2} {f3}\")\n#2",
+        "detail": "main",
+        "documentation": {}
+    }
+]

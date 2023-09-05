@@ -1,0 +1,28 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "hello",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def hello():\n    return 'Hello, World!'\nif __name__ == '__main__':\n    app.run()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = Flask(__name__)\n@app.route('/')\ndef hello():\n    return 'Hello, World!'\nif __name__ == '__main__':\n    app.run()",
+        "detail": "main",
+        "documentation": {}
+    }
+]

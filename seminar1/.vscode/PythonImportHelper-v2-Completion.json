@@ -1,0 +1,11 @@
+[
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "n = int(10)\nif(n > 3 and n<50 or n==3):\n    print('yes')\nelse:\n    print('no')\n# машина за день проезжает n, за сколько дней проедет m?\n# n = int(750)\n# m= int(751)\n# sum = (m+n-1)//n\n# print(sum)",
+        "detail": "main",
+        "documentation": {}
+    }
+]

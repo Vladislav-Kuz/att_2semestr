@@ -9,22 +9,23 @@
 
 # from random import randint
 #
-# n = int(input("Введите количество элементов: "))
-#
-# # list_rand = [randint(1, 10) for i in range(n)]
-#
-# print(f'Введите элементы массива: ')
-# for i in range(n):
-#     list_rand[i] = int(input("A[%d] = " % i))
-# print(list_rand)
-# count = 0
-# list_out = list()
-# a = int(input("Введите искомое число: "))
-#
-# for i in range(0, len(list_rand), 1):
-#     if a == list_rand[i]:
-#         count += 1
-# print(f'{a} -> {count} раз')
+n = int(input("Введите количество элементов: "))
+
+# list_rand = [randint(1, 10) for i in range(n)]
+
+list_rand = list()
+print(f'Введите элементы массива: ')
+for i in range(0, n):
+    list_rand[i] = int(input("A[%d] = " % i))
+print(list_rand)
+count = 0
+list_out = list()
+a = int(input("Введите искомое число: "))
+
+for i in range(0, len(list_rand), 1):
+    if a == list_rand[i]:
+        count += 1
+print(f'{a} -> {count} раз')
 
 
 

@@ -4,8 +4,24 @@
 # m — кол-во элементов второго множества.
 # Затем пользователь вводит сами элементы множеств.
 #
+from random import randint
+from numpy import sort
 
-
+rand_min = 0
+rand_max = 10
+n = int(input("Введите размер 1-го множества: "))
+m = int(input("Введите размер 2-го множества: "))
+print(f"В наборах использованы числа от {rand_min} до {rand_max}")
+list_n = [randint(rand_min, rand_max) for i in range(n)]
+list_m = [randint(rand_min, rand_max) for j in range(m)]
+set_n = set(sort(list_n))
+set_m = set(sort(list_m))
+set_sum = set_n.intersection(set_m)
+print(f"Первый неупорядоченный набор целых чисел: {list_n}")
+print(f"Второй неупорядоченный набор целых чисел: {list_m}")
+print(f"1-е множество упорядоченных уникальных значений: {set_n}")
+print(f"2-е множество упорядоченных уникальных значений: {set_m}")
+print(f"Уникальные упорядоченные числа из 1-го и 2-го множеств: {set_sum}")
 #
 # Задача 24: В фермерском хозяйстве в Карелии выращивают чернику.
 # Она растёт на круглой грядке, причём кусты высажены только по окружности.
@@ -22,28 +38,48 @@
 # 3. Находим сумму 3-х соседних элементов
 # Чтобы полностью соответствовать изначальному условию, можно индексацией поиграть,
 # чтобы брать элементы слева и справа от центрального
+from typing import List
 
 # n = 8
 # list_1 = [1, 2, 3, 4, 5, 6, 7, 8]
-n = int(input("Введите количество элементов: "))
+flag = 0
+while flag == 0:
+    n = int(input("Введите количество элементов: "))
+    if n >= 3:
+        flag = 1
+    else:
+        print("Кол-во элементов должно быть больше 3! Повторите ввод.")
 print(f'Введите значения элементов: ')
+
 list_1 = list()
 for i in range(n):
     list_1.append(int(input("A[%d] = " % i)))
 print(f"Полученная последовательность: {list_1}")
+
 i = 0
 right_pos = 0
-center_pos = 0
-for center_pos in range(n):
-    right_pos = center_pos + 3
+left_pos = 0
+max_sum = 0
+max_index = list()
+for left_pos in range(n):
+    right_pos = left_pos + 3
     if right_pos <= len(list_1):
-        to_convert = tuple(list_1[center_pos:right_pos])
+        to_convert = tuple(list_1[left_pos:right_pos])
         a, b, c = to_convert
         res_sum = a + b + c
-        print(f"{list_1[center_pos:right_pos]} => сумма = {res_sum}")
+        print(f"поз.{left_pos+1}: {list_1[left_pos:right_pos]} => сумма = {res_sum}")
     else:
-        to_convert = tuple(list_1[center_pos:n] + list_1[:right_pos-n])
+        to_convert = tuple(list_1[left_pos:n] + list_1[:right_pos-n])
         a, b, c = to_convert
         res_sum = a + b + c
-        print(f"{list_1[center_pos:n] + list_1[:right_pos-n]} => сумма = {res_sum}")
+        print(f"поз.{left_pos+1}: {list_1[left_pos:n] + list_1[:right_pos-n]} => сумма = {res_sum}")
+    if res_sum >= max_sum:
+        if res_sum == max_sum:
+            max_index.append(left_pos + 1)
+        else:
+            while len(max_index) > 0:
+                max_index.pop()
+            max_index.insert(0, left_pos + 1)
+        max_sum = res_sum
 
+print(f"На позиции {max_index} находится наибольшее значение суммы трех элементов - {max_sum}")

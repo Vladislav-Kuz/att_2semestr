@@ -4,24 +4,26 @@
 # m — кол-во элементов второго множества.
 # Затем пользователь вводит сами элементы множеств.
 #=====================================================================
-from random import randint
-from numpy import sort
-
-rand_min = 0
-rand_max = 10
-n = int(input("Введите размер 1-го множества: "))
-m = int(input("Введите размер 2-го множества: "))
-print(f"В наборах использованы числа от {rand_min} до {rand_max}")
-list_n = [randint(rand_min, rand_max) for i in range(n)]
-list_m = [randint(rand_min, rand_max) for j in range(m)]
-set_n = set(sort(list_n))
-set_m = set(sort(list_m))
-set_sum = set_n.intersection(set_m)
-print(f"Первый неупорядоченный набор целых чисел: {list_n}")
-print(f"Второй неупорядоченный набор целых чисел: {list_m}")
-print(f"1-е множество упорядоченных уникальных значений: {set_n}")
-print(f"2-е множество упорядоченных уникальных значений: {set_m}")
-print(f"Уникальные упорядоченные числа из 1-го и 2-го множеств: {set_sum}")
+# from random import randint
+# from numpy import sort
+#
+# rand_min = 0
+# rand_max = 10
+# n = int(input("Введите размер 1-го множества: "))
+# m = int(input("Введите размер 2-го множества: "))
+# print(f"В наборах использованы числа от {rand_min} до {rand_max}")
+# list_n = [randint(rand_min, rand_max) for i in range(n)]
+# list_m = [randint(rand_min, rand_max) for j in range(m)]
+# set_n = set(list_n)
+# set_m = set(list_m)
+# set_sum = set_n.intersection(set_m)
+# set_sorted_sum = sorted(set_sum)
+#
+# print(f"Первый неупорядоченный набор целых чисел: {list_n}")
+# print(f"Второй неупорядоченный набор целых чисел: {list_m}")
+# print(f"1-е множество уникальных значений: {set_n}")
+# print(f"2-е множество уникальных значений: {set_m}")
+# print(f"Уникальные упорядоченные числа из 1-го и 2-го множеств: {set_sorted_sum}")
 #=====================================================================
 #
 # Задача 24: В фермерском хозяйстве в Карелии выращивают чернику.
@@ -41,6 +43,7 @@ print(f"Уникальные упорядоченные числа из 1-го �
 # чтобы брать элементы слева и справа от центрального
 
 #=====================================================================
+# Ввод последовательности общий для всех решений
 # n = 8
 # list_1 = [1, 2, 3, 4, 5, 6, 7, 8]
 flag = 0
@@ -57,31 +60,45 @@ for i in range(n):
     list_1.append(int(input("A[%d] = " % i)))
 print(f"Полученная последовательность: {list_1}")
 
-i = 0
-right_pos = 0
-left_pos = 0
-max_sum = 0
-max_index = list()
-for left_pos in range(n):
-    right_pos = left_pos + 3
-    if right_pos <= len(list_1):
-        t_for_sum = tuple(list_1[left_pos:right_pos])
-        a, b, c = t_for_sum
-        res_sum = a + b + c
-        print(f"поз.{left_pos+1}: {list_1[left_pos:right_pos]} => сумма = {res_sum}")
-    else:
-        t_for_sum = tuple(list_1[left_pos:n] + list_1[:right_pos-n])
-        a, b, c = t_for_sum
-        res_sum = a + b + c
-        print(f"поз.{left_pos+1}: {list_1[left_pos:n] + list_1[:right_pos-n]} => сумма = {res_sum}")
-    if res_sum >= max_sum:
-        if res_sum == max_sum:
-            max_index.append(left_pos + 1)
-        else:
-            while len(max_index) > 0:
-                max_index.pop()
-            max_index.insert(0, left_pos + 1)
-        max_sum = res_sum
-
-print(f"На позиции {max_index} находится наибольшее значение суммы трех элементов - {max_sum}")
+# Отсюда мой вариант решения
+# i = 0
+# right_pos = 0
+# left_pos = 0
+# max_sum = 0
+# max_index = list()
+# for left_pos in range(n):
+#     right_pos = left_pos + 3
+#     if right_pos <= len(list_1):
+#         t_for_sum = tuple(list_1[left_pos:right_pos])
+#         a, b, c = t_for_sum
+#         res_sum = a + b + c
+#         print(f"поз.{left_pos+1}: {list_1[left_pos:right_pos]} => сумма = {res_sum}")
+#     else:
+#         t_for_sum = tuple(list_1[left_pos:n] + list_1[:right_pos-n])
+#         a, b, c = t_for_sum
+#         res_sum = a + b + c
+#         print(f"поз.{left_pos+1}: {list_1[left_pos:n] + list_1[:right_pos-n]} => сумма = {res_sum}")
+#     if res_sum >= max_sum:
+#         if res_sum == max_sum:
+#             max_index.append(left_pos + 1)
+#         else:
+#             while len(max_index) > 0:
+#                 max_index.pop()
+#             max_index.insert(0, left_pos + 1)
+#         max_sum = res_sum
+# print(f"На позиции {max_index} находится наибольшее значение суммы трех элементов - {max_sum}")
 #=====================================================================
+# Второй вариант решения от Николая
+sum_els = 0
+sum_max = 0
+for i in range(n):
+    #sum_els = list_1[i-1] + list_1[i] + list_1[i-n+1]
+    #- вот это условие подходит под все случаи, проверьте.
+    #sum_els = list_1[i-1] + list_1[i] + list_1[(i+1) % n]
+    # #- или это
+    sum_els = list_1[i-2] + list_1[i-1] + list_1[i]
+    # #- или это
+    if sum_els > sum_max:
+        sum_max = sum_els
+    print(sum_els)
+print(sum_max)

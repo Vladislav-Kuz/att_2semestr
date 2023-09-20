@@ -1,4 +1,6 @@
 from logger import *
+from data_remove import *
+
 
 def interface():
     cmd = 0
@@ -7,7 +9,8 @@ def interface():
             '1. Добавить контакт\n'
             '2. Вывести все контакты\n'
             '3. Поиск контакта\n'
-            '4. Выход')
+            '4. Удаление контакта\n'
+            '5. Выход')
         cmd = input("Введите действие: ")
         while cmd not in ('1', '2', '3', '4'):
             print("Некорректный ввод")
@@ -19,4 +22,6 @@ def interface():
             case '3':
                 search_line()
             case '4':
+                delete_data()
+            case '5':
                 print("Всего доброго!")

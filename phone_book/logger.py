@@ -1,4 +1,4 @@
-from data_crate import *
+from data_create import *
 
 def enter_data():
     name = enter_first_name()
@@ -7,7 +7,6 @@ def enter_data():
     addr = enter_address()
     with open("book.txt", 'a', encoding='utf8') as file:
         file.write(f"{name} {surname} \n{phone} \n{addr}\n\n")
-
 
 def print_data():
     with open("book.txt", 'r', encoding='utf8') as file:
@@ -37,3 +36,4 @@ def search_line():
             #     print(item)
             #     print()
                 print(item, end='\n\n')
+

@@ -11,7 +11,7 @@
 # **Вывод:** Парам пам-пам
 
 
-# def count_syllables(list_phrase, ref_str):
+# def count_syllables(list_phrase, ref_str): # первый вариант
 #     count = 0
 #     for letter in list_phrase:
 #         if letter in ref_str:
@@ -43,7 +43,7 @@ if __name__ == '__main__':
 
     lst_phrase = list(map(str, chant.split()))
     syllables_sum = count_syllables(chant, vowel_letters)
-    # syllables_sum = list(count_syllables(item, vowel_letters) for item in lst_phrase)
+    # syllables_sum = list(count_syllables(item, vowel_letters) for item in lst_phrase) # первый вариант
     print(f'В кричалке "{chant}" всё {is_rhythm(syllables_sum)}')
 
 
@@ -77,4 +77,4 @@ def print_operation_table(operation, num_rows=6, num_columns=6):
 
 print_operation_table(lambda x, y: x*y)
 print()
-print_operation_table(lambda x, y: x+y)
+

@@ -1,6 +1,8 @@
 import pandas as pd
 import seaborn as sns
 
+# На гитхабе файл, сделанный в Google Collab
+
 df = pd.read_csv('sample_data/california_housing_train.csv')
 print(df.head(n=10)) #количество эл-то от начала
 print()

@@ -1,4 +1,3 @@
-from logger import *
 
 def enter_first_name():
     return input("Введите имя: ").capitalize()

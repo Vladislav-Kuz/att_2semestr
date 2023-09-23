@@ -22,18 +22,9 @@ def search_line():
     index = int(input("Введите вариант: ")) - 1
     searched = input("Введите данные для поиска: ").title()
     with open("book.txt", 'r', encoding='utf8') as file:
-        # print(file)
-        # print([file.read()])    # отображает форматирование
-        # # каретка переехала в конец
-        # file.seek(0)  # перевод каретки в позицию 0
-        # print(file.readlines()) # пустой список, разбивает на список
-        # file.seek(0)  # перевод каретки в позицию 0
-        # print(file.read().split('\n\n'))
         data = file.read().strip().split('\n\n')
         for item in data:
             new_item = item.replace('\n', ' ').split()
             if searched in new_item[index]:
-            #     print(item)
-            #     print()
                 print(item, end='\n\n')
 

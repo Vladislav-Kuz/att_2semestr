@@ -1,0 +1,657 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "randint",
+        "importPath": "random",
+        "description": "random",
+        "isExtraImport": true,
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "HW2.venv.Scripts.activate_this",
+        "description": "HW2.venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": "HW2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "HW2.venv.Scripts.activate_this",
+        "description": "HW2.venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": "HW2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "HW2.venv.Scripts.activate_this",
+        "description": "HW2.venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "HW2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "HW2.venv.Scripts.activate_this",
+        "description": "HW2.venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "HW2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "HW2.venv.Scripts.activate_this",
+        "description": "HW2.venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "HW2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "HW2.venv.Scripts.activate_this",
+        "description": "HW2.venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "HW2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "HW2.venv.Scripts.activate_this",
+        "description": "HW2.venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "HW2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "HW2.venv.Scripts.activate_this",
+        "description": "HW2.venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "HW2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "count_r",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "count_r = 0\ncount_o = 0\nprint(f\"Введите общее число монет: \")\nn = int(input())\nlist_m = [randint(0, 2) for i in range(n)]\n# Для удобства отображения сделаем список из символов\nlist_char = []\nfor i in range(0, n, 1):\n    if list_m[i] == 0:\n        list_char.append('Р')",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "count_o",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "count_o = 0\nprint(f\"Введите общее число монет: \")\nn = int(input())\nlist_m = [randint(0, 2) for i in range(n)]\n# Для удобства отображения сделаем список из символов\nlist_char = []\nfor i in range(0, n, 1):\n    if list_m[i] == 0:\n        list_char.append('Р')\n    else:",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "n = int(input())\nlist_m = [randint(0, 2) for i in range(n)]\n# Для удобства отображения сделаем список из символов\nlist_char = []\nfor i in range(0, n, 1):\n    if list_m[i] == 0:\n        list_char.append('Р')\n    else:\n        list_char.append('О')\nprint(list_char)",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "list_m",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "list_m = [randint(0, 2) for i in range(n)]\n# Для удобства отображения сделаем список из символов\nlist_char = []\nfor i in range(0, n, 1):\n    if list_m[i] == 0:\n        list_char.append('Р')\n    else:\n        list_char.append('О')\nprint(list_char)\nfor i in range(n):",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "list_char",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "list_char = []\nfor i in range(0, n, 1):\n    if list_m[i] == 0:\n        list_char.append('Р')\n    else:\n        list_char.append('О')\nprint(list_char)\nfor i in range(n):\n    if list_m[i] == 1:\n        count_o += 1",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "list_num",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "list_num = []\nlength = 10 #максимальное значение x и y\ns = 1\np = 1\nres_1 = 0\nres_2 = 0\nfor s in range(1, 2*length+1): #ограничение на максимальную сумму\n    for p in range(1, length*length+1):#ограничение на максимальное произведение\n        d = s ** 2 - 4 * p  # Дискриминант\n        if d >= 0:",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "length",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "length = 10 #максимальное значение x и y\ns = 1\np = 1\nres_1 = 0\nres_2 = 0\nfor s in range(1, 2*length+1): #ограничение на максимальную сумму\n    for p in range(1, length*length+1):#ограничение на максимальное произведение\n        d = s ** 2 - 4 * p  # Дискриминант\n        if d >= 0:\n            res_1 = (s + d**0.5) / 2",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "s",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "s = 1\np = 1\nres_1 = 0\nres_2 = 0\nfor s in range(1, 2*length+1): #ограничение на максимальную сумму\n    for p in range(1, length*length+1):#ограничение на максимальное произведение\n        d = s ** 2 - 4 * p  # Дискриминант\n        if d >= 0:\n            res_1 = (s + d**0.5) / 2\n            res_2 = (s - d**0.5) / 2",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "p",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "p = 1\nres_1 = 0\nres_2 = 0\nfor s in range(1, 2*length+1): #ограничение на максимальную сумму\n    for p in range(1, length*length+1):#ограничение на максимальное произведение\n        d = s ** 2 - 4 * p  # Дискриминант\n        if d >= 0:\n            res_1 = (s + d**0.5) / 2\n            res_2 = (s - d**0.5) / 2\n            if res_1 <= length and res_2 <= length:",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "res_1",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "res_1 = 0\nres_2 = 0\nfor s in range(1, 2*length+1): #ограничение на максимальную сумму\n    for p in range(1, length*length+1):#ограничение на максимальное произведение\n        d = s ** 2 - 4 * p  # Дискриминант\n        if d >= 0:\n            res_1 = (s + d**0.5) / 2\n            res_2 = (s - d**0.5) / 2\n            if res_1 <= length and res_2 <= length:\n                if (res_1 == res_1 // 1) or (res_2 == res_2 // 1):  # Проверка на целочисленность",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "res_2",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "res_2 = 0\nfor s in range(1, 2*length+1): #ограничение на максимальную сумму\n    for p in range(1, length*length+1):#ограничение на максимальное произведение\n        d = s ** 2 - 4 * p  # Дискриминант\n        if d >= 0:\n            res_1 = (s + d**0.5) / 2\n            res_2 = (s - d**0.5) / 2\n            if res_1 <= length and res_2 <= length:\n                if (res_1 == res_1 // 1) or (res_2 == res_2 // 1):  # Проверка на целочисленность\n                    if res_1 > 0 and res_2 > 0:  # проверка на натуральность",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "n = int(input())\nbase = 2\nres = 0\ni = 0\nlist_1 = list()\nwhile res <= n:\n    res = base**i\n    if res <= n:\n        list_1.append(res)\n        i += 1",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "base = 2\nres = 0\ni = 0\nlist_1 = list()\nwhile res <= n:\n    res = base**i\n    if res <= n:\n        list_1.append(res)\n        i += 1\nprint(f\"Степени двойки -> {list_1}\")",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "res",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "res = 0\ni = 0\nlist_1 = list()\nwhile res <= n:\n    res = base**i\n    if res <= n:\n        list_1.append(res)\n        i += 1\nprint(f\"Степени двойки -> {list_1}\")",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "i",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "i = 0\nlist_1 = list()\nwhile res <= n:\n    res = base**i\n    if res <= n:\n        list_1.append(res)\n        i += 1\nprint(f\"Степени двойки -> {list_1}\")",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "list_1",
+        "kind": 5,
+        "importPath": "HW2.main",
+        "description": "HW2.main",
+        "peekOfCode": "list_1 = list()\nwhile res <= n:\n    res = base**i\n    if res <= n:\n        list_1.append(res)\n        i += 1\nprint(f\"Степени двойки -> {list_1}\")",
+        "detail": "HW2.main",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "HW3.venv.Scripts.activate_this",
+        "description": "HW3.venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": "HW3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "HW3.venv.Scripts.activate_this",
+        "description": "HW3.venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": "HW3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "HW3.venv.Scripts.activate_this",
+        "description": "HW3.venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "HW3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "HW3.venv.Scripts.activate_this",
+        "description": "HW3.venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "HW3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "HW3.venv.Scripts.activate_this",
+        "description": "HW3.venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "HW3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "HW3.venv.Scripts.activate_this",
+        "description": "HW3.venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "HW3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "HW3.venv.Scripts.activate_this",
+        "description": "HW3.venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "HW3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "HW3.venv.Scripts.activate_this",
+        "description": "HW3.venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "HW3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "HW_1.main",
+        "description": "HW_1.main",
+        "peekOfCode": "n = 123\n# m = str(n)\n# res = int(m[0]) + int(m[1]) + int(m[2])\n# print(res)\n# f1 = n//100\n# f2 = n%100//10\n# f3 = n%10\n# res = f1 + f2 + f3 \n# print(f\"{res} -> {f1} {f2} {f3}\")\n#2",
+        "detail": "HW_1.main",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "pythonProject1.venv.Scripts.activate_this",
+        "description": "pythonProject1.venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": "pythonProject1.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "pythonProject1.venv.Scripts.activate_this",
+        "description": "pythonProject1.venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": "pythonProject1.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "pythonProject1.venv.Scripts.activate_this",
+        "description": "pythonProject1.venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "pythonProject1.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "pythonProject1.venv.Scripts.activate_this",
+        "description": "pythonProject1.venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "pythonProject1.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "pythonProject1.venv.Scripts.activate_this",
+        "description": "pythonProject1.venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "pythonProject1.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "pythonProject1.venv.Scripts.activate_this",
+        "description": "pythonProject1.venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "pythonProject1.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "pythonProject1.venv.Scripts.activate_this",
+        "description": "pythonProject1.venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "pythonProject1.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "pythonProject1.venv.Scripts.activate_this",
+        "description": "pythonProject1.venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "pythonProject1.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "print_hi",
+        "kind": 2,
+        "importPath": "pythonProject1.main",
+        "description": "pythonProject1.main",
+        "peekOfCode": "def print_hi(name):\n    # Use a breakpoint in the code line below to debug your script.\n    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.\n# Press the green button in the gutter to run the script.\nif __name__ == '__main__':\n    print_hi('PyCharm')\n# See PyCharm help at https://www.jetbrains.com/help/pycharm/",
+        "detail": "pythonProject1.main",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "seminar1.main",
+        "description": "seminar1.main",
+        "peekOfCode": "n = int(10)\nif(n > 3 and n<50 or n==3):\n    print('yes')\nelse:\n    print('no')\n# машина за день проезжает n, за сколько дней проедет m?\n# n = int(750)\n# m= int(751)\n# sum = (m+n-1)//n\n# print(sum)",
+        "detail": "seminar1.main",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "Seminar2.venv.Scripts.activate_this",
+        "description": "Seminar2.venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": "Seminar2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "Seminar2.venv.Scripts.activate_this",
+        "description": "Seminar2.venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": "Seminar2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "Seminar2.venv.Scripts.activate_this",
+        "description": "Seminar2.venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "Seminar2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "Seminar2.venv.Scripts.activate_this",
+        "description": "Seminar2.venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "Seminar2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "Seminar2.venv.Scripts.activate_this",
+        "description": "Seminar2.venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "Seminar2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "Seminar2.venv.Scripts.activate_this",
+        "description": "Seminar2.venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "Seminar2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "Seminar2.venv.Scripts.activate_this",
+        "description": "Seminar2.venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "Seminar2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "Seminar2.venv.Scripts.activate_this",
+        "description": "Seminar2.venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "Seminar2.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "fibonacci",
+        "kind": 2,
+        "importPath": "Seminar2.main",
+        "description": "Seminar2.main",
+        "peekOfCode": "def fibonacci(num):\n    a = 0\n    b = 1\n    i = 1\n    while a <= num:\n        if num == a:\n            return 1\n            break\n        a = b\n        b = a+b",
+        "detail": "Seminar2.main",
+        "documentation": {}
+    },
+    {
+        "label": "num",
+        "kind": 5,
+        "importPath": "Seminar2.main",
+        "description": "Seminar2.main",
+        "peekOfCode": "num = int(input('Input number: '))\nprint(fibonacci(num))\n#\n# Орел и решка\n# Дана строка текста, состоящая из букв русского алфавита \"О\" и \"Р\".\n# Буква \"О\" – соответствует выпадению Орла, а буква \"Р\" – соответствует выпадению Решки.\n# Напишите программу, которая подсчитывает наибольшее количество подряд выпавших Решек.\n# Формат входных данных\n# На вход программе подается строка текста, состоящая из букв русского алфавита \"О\" и \"Р\".\n# Формат выходных данных",
+        "detail": "Seminar2.main",
+        "documentation": {}
+    },
+    {
+        "label": "str",
+        "kind": 5,
+        "importPath": "Seminar2.main",
+        "description": "Seminar2.main",
+        "peekOfCode": "str = 'ОРРОРОРООРРРО'\nn=0\nprint(\"РРР\" in str)\nwhile 'Р'*n in str:\n    n+=1\nprint(n-1)\n# Напишите\n# программу, которая\n# будет\n# преобразовывать",
+        "detail": "Seminar2.main",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "Seminar3.venv.Scripts.activate_this",
+        "description": "Seminar3.venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": "Seminar3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "Seminar3.venv.Scripts.activate_this",
+        "description": "Seminar3.venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": "Seminar3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "Seminar3.venv.Scripts.activate_this",
+        "description": "Seminar3.venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "Seminar3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "Seminar3.venv.Scripts.activate_this",
+        "description": "Seminar3.venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "Seminar3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "Seminar3.venv.Scripts.activate_this",
+        "description": "Seminar3.venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "Seminar3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "Seminar3.venv.Scripts.activate_this",
+        "description": "Seminar3.venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "Seminar3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "Seminar3.venv.Scripts.activate_this",
+        "description": "Seminar3.venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "Seminar3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "Seminar3.venv.Scripts.activate_this",
+        "description": "Seminar3.venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "Seminar3.venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "list_in",
+        "kind": 5,
+        "importPath": "Seminar3.main",
+        "description": "Seminar3.main",
+        "peekOfCode": "list_in = [0, -1, 5, 2, 3]\ncount = 0\nlist_out = list()\ntup_out = tuple()\nfor i in range(len(list_in)):\n    if list_in[i] > list_in[i-1]:\n        tup_out = (list_in[i], list_in[i-1])\n        list_out.append(tup_out)\n        count += 1\nprint(f'В массиве {list_in}  {count} элемента(ов) больше предыдущего: ')",
+        "detail": "Seminar3.main",
+        "documentation": {}
+    },
+    {
+        "label": "count",
+        "kind": 5,
+        "importPath": "Seminar3.main",
+        "description": "Seminar3.main",
+        "peekOfCode": "count = 0\nlist_out = list()\ntup_out = tuple()\nfor i in range(len(list_in)):\n    if list_in[i] > list_in[i-1]:\n        tup_out = (list_in[i], list_in[i-1])\n        list_out.append(tup_out)\n        count += 1\nprint(f'В массиве {list_in}  {count} элемента(ов) больше предыдущего: ')\n# print(list_out)",
+        "detail": "Seminar3.main",
+        "documentation": {}
+    },
+    {
+        "label": "list_out",
+        "kind": 5,
+        "importPath": "Seminar3.main",
+        "description": "Seminar3.main",
+        "peekOfCode": "list_out = list()\ntup_out = tuple()\nfor i in range(len(list_in)):\n    if list_in[i] > list_in[i-1]:\n        tup_out = (list_in[i], list_in[i-1])\n        list_out.append(tup_out)\n        count += 1\nprint(f'В массиве {list_in}  {count} элемента(ов) больше предыдущего: ')\n# print(list_out)\nfor i in range(len(list_out)):",
+        "detail": "Seminar3.main",
+        "documentation": {}
+    },
+    {
+        "label": "tup_out",
+        "kind": 5,
+        "importPath": "Seminar3.main",
+        "description": "Seminar3.main",
+        "peekOfCode": "tup_out = tuple()\nfor i in range(len(list_in)):\n    if list_in[i] > list_in[i-1]:\n        tup_out = (list_in[i], list_in[i-1])\n        list_out.append(tup_out)\n        count += 1\nprint(f'В массиве {list_in}  {count} элемента(ов) больше предыдущего: ')\n# print(list_out)\nfor i in range(len(list_out)):\n    a, b = list_out[i]",
+        "detail": "Seminar3.main",
+        "documentation": {}
+    },
+    {
+        "label": "hello",
+        "kind": 2,
+        "importPath": "test.main",
+        "description": "test.main",
+        "peekOfCode": "def hello():\n    return 'Hello, World!'\nif __name__ == '__main__':\n    app.run()",
+        "detail": "test.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "test.main",
+        "description": "test.main",
+        "peekOfCode": "app = Flask(__name__)\n@app.route('/')\ndef hello():\n    return 'Hello, World!'\nif __name__ == '__main__':\n    app.run()",
+        "detail": "test.main",
+        "documentation": {}
+    }
+]

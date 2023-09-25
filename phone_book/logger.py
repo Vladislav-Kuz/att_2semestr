@@ -27,4 +27,3 @@ def search_line():
             new_item = item.replace('\n', ' ').split()
             if searched in new_item[index]:
                 print(item, end='\n\n')
-
